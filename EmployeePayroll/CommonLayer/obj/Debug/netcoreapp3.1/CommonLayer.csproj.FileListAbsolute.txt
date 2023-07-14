@@ -1,0 +1,10 @@
+C:\Users\5570\Desktop\CFP_DOTNET_MVC\EmployeePayroll\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.deps.json
+C:\Users\5570\Desktop\CFP_DOTNET_MVC\EmployeePayroll\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\5570\Desktop\CFP_DOTNET_MVC\EmployeePayroll\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\5570\Desktop\CFP_DOTNET_MVC\EmployeePayroll\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csproj.AssemblyReference.cache
+C:\Users\5570\Desktop\CFP_DOTNET_MVC\EmployeePayroll\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\5570\Desktop\CFP_DOTNET_MVC\EmployeePayroll\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfoInputs.cache
+C:\Users\5570\Desktop\CFP_DOTNET_MVC\EmployeePayroll\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfo.cs
+C:\Users\5570\Desktop\CFP_DOTNET_MVC\EmployeePayroll\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csproj.CoreCompileInputs.cache
+C:\Users\5570\Desktop\CFP_DOTNET_MVC\EmployeePayroll\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\5570\Desktop\CFP_DOTNET_MVC\EmployeePayroll\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.pdb
