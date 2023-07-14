@@ -1,0 +1,14 @@
+﻿
+.card-home{
+    padding : 50px;  
+    background-color  : aliceblue;
+    border : solid;
+}
+
+.container-home{
+    width : 800px;
+    height : 500px;
+    padding-top : 50px;
+    
+}
+
