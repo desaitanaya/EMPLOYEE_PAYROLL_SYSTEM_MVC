@@ -1,0 +1,148 @@
+﻿@model CommonLayer.Model.EmployeeModel
+
+@{
+    ViewData["Title"] = "AddEmployee";
+}
+
+<br />
+<div class = "heading">
+    <h5>Employee SignUp</h5>
+</div>
+
+
+<div class="card">
+   <div class ="container">
+    <div class="col-md-20">
+       
+       
+        <form asp-action="AddEmployee">
+            <br />
+            
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+             
+           @* <div class="form-group">
+                <label asp-for="EmployeeID" class="control-label"></label>
+                <input asp-for="EmployeeID" class="form-control" />
+                <span asp-validation-for="EmployeeID" class="text-danger"></span>
+            </div>*@
+            <br />
+            <div class="form-group row">
+                <label asp-for="Name" class="control-label"><b>Name</b></label>
+                <div class = "col-md-8">
+                <input asp-for="Name" class="form-control" />
+                </div>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group row">
+                <label asp-for="Gender"  name ="Gender" class="control-label"><b>Gender</b></label>
+                @*<input asp-for="Gender" class="form-control" />*@
+                    <div class="col-md-10">
+                     @Html.RadioButtonFor(model => model.Gender, "M") 
+                     Male
+                    
+                    @Html.RadioButtonFor(model => model.Gender, "F") 
+                    Female
+                    </div>
+                    
+                    
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <label asp-for="ProfileImage" name = "ProfileImage" class="control-label"><b>Profile Image</b></label>
+                @*<input asp-for="ProfileImage" class="form-control" />*@
+                    <div class="col-md-10">
+                    @Html.RadioButtonFor(model => model.ProfileImage, "~/asset/female1.png")
+                    <img class = "Profile-Image-1" src ="~/asset/female1.png"/>
+
+                    @Html.RadioButtonFor(model => model.ProfileImage, "~/asset/Female2.png")
+                    <img class = "Profile-Image-2" src ="~/asset/Female2.png"/>
+
+                    @Html.RadioButtonFor(model => model.ProfileImage, "~/asset/Male1.png")
+                    <img class = "Profile-Image-3" src ="~/asset/Male1.png"/>
+
+                    @Html.RadioButtonFor(model => model.ProfileImage, "~/asset/Male2.png")
+                    <img class = "Profile-Image-4" src ="~/asset/Male2.png"/>
+                
+               </div>
+                <span asp-validation-for="ProfileImage" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group row">
+                <label asp-for="StartDate" class="control-label"><b>Start Date</b></label>
+                <div class="col-md-8">
+                <input asp-for="StartDate"  type ="date" class="form-control" />
+                </div>
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group row">
+                <label asp-for="Department" class="control-label"><b>Department</b></label>
+                @*<input asp-for="Department" class="form-control" />*@
+                <div class="col-md-8">
+                <select class="form-control" id="Department" name="Department">
+                    
+                    <option>Select Department</option> 
+                    <option value = "IT">IT</option> 
+                    <option value = "Finance">Finance</option> 
+                    <option value = "Sales">Sales</option> 
+                    <option value = "Marketing">Marketing</option> 
+                    <option value = "Research">Research</option> 
+                    <option value = "Customer Service">Customer Service</option>
+            
+                </select>
+                </div>
+                   
+                <span asp-validation-for="Department" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group row">
+                <label asp-for="Salary" class="control-label"><b>Salary</b></label>
+                <div class="col-md-8">
+                <input asp-for="Salary" class="form-control" />
+                </div>
+                <span asp-validation-for="Salary" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group row">
+                <label asp-for="CreatedAt" class="control-label"><b>Created At</b></label>
+                <div class="col-md-8">
+                <input asp-for="CreatedAt" class="form-control" />
+                </div>
+                <span asp-validation-for="CreatedAt" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group row">
+                <label asp-for="UpdatedAt" class="control-label"><b>Updated At</b></label>
+                <div class="col-md-8">
+                <input asp-for="UpdatedAt" class="form-control" />
+                </div>
+                <span asp-validation-for="UpdatedAt" class="text-danger"></span>
+            </div>
+            <br />
+                <div class="form-group row">
+                    <label asp-for="Notes" class="control-label"><b>Notes</b></label>
+                    <div class="col-md-8">
+                        <input asp-for="Notes" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Notes" class="text-danger"></span>
+                </div>
+                <br />
+            <div class="form-group">
+                <div class = "container-btn">
+                <button type="submit" value="Create"  class="btn btn-primary" >Create</button>
+                    </div>
+            </div>
+        </form>
+    </div>
+    </div>
+</div>
+<br />
+<div>
+    <button type="button" button class ="btn btn-primary " onclick="location.href='@Url.Action("Index", "Home")'">Back To Home </button>
+    @*<a asp-action="GetAllEmployees">Back to List</a>*@
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
