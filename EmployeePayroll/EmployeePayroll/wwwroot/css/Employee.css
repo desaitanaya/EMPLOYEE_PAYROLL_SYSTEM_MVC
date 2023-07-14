@@ -1,0 +1,45 @@
+﻿
+input[type = "radio"]{
+    margin-left : 20px;
+    margin-right : 2px;
+}
+
+label {
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+}
+
+.container-btn{
+    text-align : center;
+    
+}
+
+.container-btnlogin {
+    margin-left: 150px;
+}
+
+button {
+    width: 160px;
+    height: 35px;
+}
+
+.container{
+    width : 900px;
+    
+    
+}
+
+.card{
+    background-color : aliceblue;
+}
+
+.container-login{
+   height : 300px;
+   
+    place-items : center;
+    margin-left : 200px;
+    margin-top : 50px;
+}
+
+
