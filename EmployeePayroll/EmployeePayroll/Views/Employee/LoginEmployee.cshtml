@@ -1,0 +1,92 @@
+﻿@model CommonLayer.Model.EmployeeModel
+
+@{
+    ViewData["Title"] = "LoginEmployee";
+}
+
+<h5>Employee SignIn</h5>
+
+<div class="card">
+    <div class="container-login">
+
+        <div class="col-md-20">
+        <form asp-action="LoginEmployee">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <br />
+            <div class="form-group row">
+                <label asp-for="EmployeeID" class="control-label"><b>Employee ID</b></label>
+                    <div class="col-md-4">
+                <input asp-for="EmployeeID" class="form-control" />
+               </div>
+                <span asp-validation-for="EmployeeID" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group row">
+                <label asp-for="Name" class="control-label"><b>Name</b></label>
+                    <div class="col-md-4">
+                <input asp-for="Name" class="form-control" />
+                </div>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <br />
+            @*<div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProfileImage" class="control-label"></label>
+                <input asp-for="ProfileImage" class="form-control" />
+                <span asp-validation-for="ProfileImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Department" class="control-label"></label>
+                <input asp-for="Department" class="form-control" />
+                <span asp-validation-for="Department" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Salary" class="control-label"></label>
+                <input asp-for="Salary" class="form-control" />
+                <span asp-validation-for="Salary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedAt" class="control-label"></label>
+                <input asp-for="CreatedAt" class="form-control" />
+                <span asp-validation-for="CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdatedAt" class="control-label"></label>
+                <input asp-for="UpdatedAt" class="form-control" />
+                <span asp-validation-for="UpdatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Notes" class="control-label"></label>
+                <input asp-for="Notes" class="form-control" />
+                <span asp-validation-for="Notes" class="text-danger"></span>
+                </div>*@
+           
+            <div class="form-group">
+                <div class="container-btnlogin">
+                    <button type="submit" value="Login" class="btn btn-primary">Login</button>
+                    @*@ViewData["Error Message"]*@
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+    </div>
+
+<br />
+<div>
+    <button type="button" button class="btn btn-primary " onclick="location.href='@Url.Action("Index", "Home")'">Back To Home </button>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
