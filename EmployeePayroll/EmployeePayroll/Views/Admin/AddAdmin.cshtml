@@ -1,0 +1,57 @@
+﻿@model CommonLayer.Model.AdminModel
+
+@{
+    ViewData["Title"] = "AddAdmin";
+}
+
+<h5>Admin SignUp</h5>
+
+
+
+<div class="card">
+    <div class="container-login">
+
+        <div class="col-md-20">
+        <form asp-action="AddAdmin">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                <label asp-for="AdminID" class="control-label"></label>
+                <input asp-for="AdminID" class="form-control" />
+                <span asp-validation-for="AdminID" class="text-danger"></span>
+            </div>*@
+            <div class="form-group row">
+                <label asp-for="Name" class="control-label">Admin Name</label>
+                    <div class="col-md-4">
+                <input asp-for="Name" class="form-control" />
+                </div>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group row">
+                <label asp-for="Password" class="control-label"> Admin Password</label>
+                    <div class="col-md-4">
+                <input asp-for="Password" class="form-control" />
+               </div>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                    <div class="container-btnlogin">
+                <button type="submit" value="Create" class="btn btn-primary" >Create</button>
+            </div>
+            
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+<br />
+<div>
+
+        <button type="button" button class="btn btn-primary " onclick="location.href='@Url.Action("Index", "Home")'">Back To Home </button>
+        
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
