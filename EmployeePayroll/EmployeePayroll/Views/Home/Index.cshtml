@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <div class="container-home">
+   <div class ="row">
+       <div class="col-6">
+           <div class="card-home">
+                <button type="button" button class="btn btn-primary " onclick="location.href='@Url.Action("AddEmployee", "Employee")'">Employee SignUp </button>
+                <br />
+                <br />
+                <button type="button" button class="btn btn-primary " onclick="location.href='@Url.Action("LoginEmployee", "Employee")'">Employee SignIn </button>
+           </div>
+       </div>
+      
+        <div class="col-6">
+            <div class="card-home">
+                <button type="button" button class="btn btn-primary " onclick="location.href='@Url.Action("AddAdmin", "Admin")'">Admin SignUp </button>
+                <br />
+                <br />
+                <button type="button" button class="btn btn-primary " onclick="location.href='@Url.Action("LoginAdmin", "Admin")'">Admin SignIn </button>
+            </div>
+        </div>
+   </div>
+    </div>
+    
+    
+</div>
